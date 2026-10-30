@@ -1,0 +1,320 @@
+{
+  "car_model": "Kia: Niro EV (2018-2022) - testing",
+  "init": "ATST96;",
+  "pids": [
+    {
+      "pid": "2201019",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "SOC": "B10/2",
+        "HV_A": "[S17:S18]/10",
+        "HV_V": "[B19:B20]/10",
+        "HV_W": "([B19:B20]/10)*([S17:S18]/10)",
+        "HV_T_MAX": "S21",
+        "HV_T_MIN": "S22",
+        "HV_T_1": "S23",
+        "HV_T_2": "S25",
+        "HV_T_3": "S26",
+        "HV_T_4": "S27",
+        "HV_T_I": "S30",
+        "HV_C_V_MAX": "B31/50",
+        "HV_C_V_MAX_NO": "B33",
+        "HV_C_V_MIN": "B34/50",
+        "HV_C_V_MIN_NO": "B35",
+        "LV_V": "B38*0.1",
+        "KWH_CHARGED": "([B49:B50]*65536 + [B51:B52])/10",
+        "KWH_DISCHARGED": "([B53:B54]*65536 + (B55<<8) + B57)/10",
+        "HV_RELAY": "B15:7",
+        "HV_AH_CHARGED": "((B39<<24)+[B41:B43])/10",
+        "HV_AH_DISCHARGED": "[B44:B47]/10",
+        "CAPACITOR": "(B63<<8)+B65",
+        "RESISTANCE": "[B70:B71]",
+        "DM_F_RPM": "[S66:S67]",
+        "OP_TIME": "[B58:B61]/3600",
+        "HV_AV": "[B13:B14]/100"
+      }
+    },
+    {
+      "pid": "2201057",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "SOH": "[B34:B35]/10",
+        "SOC_D": "B41/2",
+        "HV_C_D_MAX_NO": "B36",
+        "HV_C_D_MIN": "[B37:B38]/10",
+        "HV_C_D_MIN_NO": "B39",
+        "AIRBAG": "B30",
+        "REGEN_MAX": "((B23<<8)+B25)/100",
+        "POWER_MAX": "[B26:B27]/100",
+        "HV_C_DIFF": "B28/50",
+        "HV_H_1": "(S31)",
+        "HV_C_V_097": "B44/50",
+        "HV_C_V_098": "B45/50"
+      }
+    },
+    {
+      "pid": "22BC03",
+      "pid_init": "ATSH770;",
+      "parameters": {
+        "IGNITION": "B11:5",
+        "DOOR_FL_OPEN": "B10:5",
+        "DOOR_FR_OPEN": "B10:4",
+        "DOOR_RL_OPEN": "B10:0",
+        "DOOR_RR_OPEN": "B10:2",
+        "TRUNK_OPEN": "B10:7",
+        "SEATBELT_FL": "B11:1",
+        "SEATBELT_FR": "B11:2",
+        "DOOR_LOCK_RL": "1-B10:1",
+        "DOOR_LOCK_RR": "1-B10:3",
+        "LOW_BEAM": "B12:5"
+      }
+    },
+    {
+      "pid": "22BC04",
+      "pid_init": "ATSH770;",
+      "parameters": {
+        "DOOR_LOCK_FL": "B10:3",
+        "DOOR_LOCK_FR": "B10:2",
+        "HIGH_BEAM": "B13:4"
+      }
+    },
+    {
+      "pid": "22B002",
+      "pid_init": "ATSH7C6;ATFCSH7C6;",
+      "parameters": {
+        "ODOMETER": "[B12:B14]",
+        "ODOMETER_MI": "(B15<<16)+[B17:B18]"
+      }
+    },
+    {
+      "pid": "220100",
+      "pid_init": "ATSH7B3;",
+      "parameters": {
+        "TMP_A": "(B12/2)-40",
+        "T_CAB": "(B11/2)-40"
+      }
+    },
+    {
+      "pid": "22C101",
+      "pid_init": "ATSH7D1;",
+      "parameters": {
+        "SPEED": "B12"
+      }
+    },
+    {
+      "pid": "21014",
+      "pid_init": "ATSH7E2;",
+      "parameters": {
+        "READY": "B26:3",
+        "GEAR": "B10",
+        "PARK_BRAKE": "B26:5",
+        "GEAR_PARK": "B10:0",
+        "GEAR_REVERSE": "B10:1",
+        "GEAR_NEUTRAL": "B10:2",
+        "GEAR_DRIVE": "B10:3"
+      }
+    },
+    {
+      "pid": "22B00E",
+      "pid_init": "ATSH7A0;",
+      "parameters": {
+        "AC_PLUG": "B10:4"
+      }
+    },
+    {
+      "pid": "22C00B4",
+      "pid_init": "ATSH7A0;",
+      "parameters": {
+        "TYRE_P_FL": "B10*0.2",
+        "TYRE_T_FL": "B11-50",
+        "TYRE_P_FR": "B14*0.2",
+        "TYRE_T_FR": "B15-50",
+        "TYRE_P_RR": "B19*0.2",
+        "TYRE_T_RR": "B20-50",
+        "TYRE_P_RL": "B23*0.2",
+        "TYRE_T_RL": "B25-50"
+      }
+    },
+    {
+      "pid": "2101",
+      "pid_init": "ATSH7E5;",
+      "parameters": {
+        "AC_C_V": "B55",
+        "OBC_TEMP": "B52/2-40"
+      }
+    },
+    {
+      "pid": "2103",
+      "pid_init": "ATSH7E5;",
+      "parameters": {
+        "AC_C_C": "[B9:B10]/100"
+      }
+    },
+    {
+      "pid": "220102",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "HV_C_V_001": "B10/50",
+        "HV_C_V_002": "B11/50",
+        "HV_C_V_003": "B12/50",
+        "HV_C_V_004": "B13/50",
+        "HV_C_V_005": "B14/50",
+        "HV_C_V_006": "B15/50",
+        "HV_C_V_007": "B17/50",
+        "HV_C_V_008": "B18/50",
+        "HV_C_V_009": "B19/50",
+        "HV_C_V_010": "B20/50",
+        "HV_C_V_011": "B21/50",
+        "HV_C_V_012": "B22/50",
+        "HV_C_V_013": "B23/50",
+        "HV_C_V_014": "B25/50",
+        "HV_C_V_015": "B26/50",
+        "HV_C_V_016": "B27/50",
+        "HV_C_V_017": "B28/50",
+        "HV_C_V_018": "B29/50",
+        "HV_C_V_019": "B30/50",
+        "HV_C_V_020": "B31/50",
+        "HV_C_V_021": "B33/50",
+        "HV_C_V_022": "B34/50",
+        "HV_C_V_023": "B35/50",
+        "HV_C_V_024": "B36/50",
+        "HV_C_V_025": "B37/50",
+        "HV_C_V_026": "B38/50",
+        "HV_C_V_027": "B39/50",
+        "HV_C_V_028": "B41/50",
+        "HV_C_V_029": "B42/50",
+        "HV_C_V_030": "B43/50",
+        "HV_C_V_031": "B44/50",
+        "HV_C_V_032": "B45/50"
+      }
+    },
+    {
+      "pid": "220103",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "HV_C_V_033": "B10/50",
+        "HV_C_V_034": "B11/50",
+        "HV_C_V_035": "B12/50",
+        "HV_C_V_036": "B13/50",
+        "HV_C_V_037": "B14/50",
+        "HV_C_V_038": "B15/50",
+        "HV_C_V_039": "B17/50",
+        "HV_C_V_040": "B18/50",
+        "HV_C_V_041": "B19/50",
+        "HV_C_V_042": "B20/50",
+        "HV_C_V_043": "B21/50",
+        "HV_C_V_044": "B22/50",
+        "HV_C_V_045": "B23/50",
+        "HV_C_V_046": "B25/50",
+        "HV_C_V_047": "B26/50",
+        "HV_C_V_048": "B27/50",
+        "HV_C_V_049": "B28/50",
+        "HV_C_V_050": "B29/50",
+        "HV_C_V_051": "B30/50",
+        "HV_C_V_052": "B31/50",
+        "HV_C_V_053": "B33/50",
+        "HV_C_V_054": "B34/50",
+        "HV_C_V_055": "B35/50",
+        "HV_C_V_056": "B36/50",
+        "HV_C_V_057": "B37/50",
+        "HV_C_V_058": "B38/50",
+        "HV_C_V_059": "B39/50",
+        "HV_C_V_060": "B41/50",
+        "HV_C_V_061": "B42/50",
+        "HV_C_V_062": "B43/50",
+        "HV_C_V_063": "B44/50",
+        "HV_C_V_064": "B45/50"
+      }
+    },
+    {
+      "pid": "220104",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "HV_C_V_065": "B10/50",
+        "HV_C_V_066": "B11/50",
+        "HV_C_V_067": "B12/50",
+        "HV_C_V_068": "B13/50",
+        "HV_C_V_069": "B14/50",
+        "HV_C_V_070": "B15/50",
+        "HV_C_V_071": "B17/50",
+        "HV_C_V_072": "B18/50",
+        "HV_C_V_073": "B19/50",
+        "HV_C_V_074": "B20/50",
+        "HV_C_V_075": "B21/50",
+        "HV_C_V_076": "B22/50",
+        "HV_C_V_077": "B23/50",
+        "HV_C_V_078": "B25/50",
+        "HV_C_V_079": "B26/50",
+        "HV_C_V_080": "B27/50",
+        "HV_C_V_081": "B28/50",
+        "HV_C_V_082": "B29/50",
+        "HV_C_V_083": "B30/50",
+        "HV_C_V_084": "B31/50",
+        "HV_C_V_085": "B33/50",
+        "HV_C_V_086": "B34/50",
+        "HV_C_V_087": "B35/50",
+        "HV_C_V_088": "B36/50",
+        "HV_C_V_089": "B37/50",
+        "HV_C_V_090": "B38/50",
+        "HV_C_V_091": "B39/50",
+        "HV_C_V_092": "B41/50",
+        "HV_C_V_093": "B42/50",
+        "HV_C_V_094": "B43/50",
+        "HV_C_V_095": "B44/50",
+        "HV_C_V_096": "B45/50"
+      }
+    },
+    {
+      "pid": "220102",
+      "pid_init": "ATSH7B3;",
+      "parameters": {
+        "COOLANT_TMP": "(B10/2)-40"
+      }
+    },
+    {
+      "pid": "22E004",
+      "pid_init": "ATSH744;",
+      "parameters": {
+        "CHARGER_CONNECTED": "B10:1"
+      }
+    },
+    {
+      "pid": "22E001",
+      "pid_init": "ATSH744;",
+      "parameters": {
+        "CHARGING": "B25:2",
+        "CHARGING_DC": "B25:3",
+        "CHARGER_DC_PWR": "(([B37:B38]*10)-50)/1000"
+      }
+    },
+    {
+      "pid": "22E003",
+      "pid_init": "ATSH744;",
+      "parameters": {
+        "CHARGING_R_A": "[B35:B36]/10"
+      }
+    },
+    {
+      "pid": "22E011",
+      "pid_init": "ATSH7E5;",
+      "parameters": {
+        "LV_SOC": "B28",
+        "LV_A": "([B26:B27]/100)-327"
+      }
+    },
+    {
+      "pid": "22E004",
+      "pid_init": "ATSH7E2;",
+      "parameters": {
+        "THROTTLE": "(B14+(B15<<8))/512"
+      }
+    },
+    {
+      "pid": "2101",
+      "pid_init": "ATSH7D4;",
+      "parameters": {
+        "STEER_ANGLE": "[S14:S15]/10"
+      }
+    }
+  ]
+}
