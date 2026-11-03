@@ -7269,6 +7269,38 @@
               "class": "none",
               "min": "0",
               "max": "1"
+            },
+            {
+              "name": "HV_AH_CHARGED",
+              "expression": "((B39<<24)+[B41:B43])/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "HV_AH_DISCHARGED",
+              "expression": "[B44:B47]/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "CAPACITOR",
+              "expression": "(B63<<8)+B65",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "840"
+            },
+            {
+              "name": "RESISTANCE",
+              "expression": "[B70:B71]",
+              "unit": "kOhm",
+              "class": "none",
+              "min": "0",
+              "max": "1000"
             }
           ]
         },
@@ -7343,6 +7375,22 @@
               "class": "temperature",
               "min": "0",
               "max": "80"
+            },
+            {
+              "name": "HV_C_V_097",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_098",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
             }
           ]
         },
@@ -7648,6 +7696,804 @@
               "expression": "[B9:B10]/100",
               "unit": "A",
               "class": "current"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_001",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_002",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_003",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_004",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_005",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_006",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_007",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_008",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_009",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_010",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_011",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_012",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_013",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_014",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_015",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_016",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_017",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_018",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_019",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_020",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_021",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_022",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_023",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_024",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_025",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_026",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_027",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_028",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_029",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_030",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_031",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_032",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220103",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_033",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_034",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_035",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_036",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_037",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_038",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_039",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_040",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_041",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_042",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_043",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_044",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_045",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_046",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_047",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_048",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_049",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_050",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_051",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_052",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_053",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_054",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_055",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_056",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_057",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_058",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_059",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_060",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_061",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_062",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_063",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_064",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220104",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_065",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_066",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_067",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_068",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_069",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_070",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_071",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_072",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_073",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_074",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_075",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_076",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_077",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_078",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_079",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_080",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_081",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_082",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_083",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_084",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_085",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_086",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_087",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_088",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_089",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_090",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_091",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_092",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_093",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_094",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_095",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_096",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7B3;",
+          "parameters": [
+            {
+              "name": "COOLANT_TMP",
+              "expression": "(B10/2)-40",
+              "unit": "°C",
+              "class": "temperature"
             }
           ]
         }
@@ -10727,522 +11573,6 @@
               "class": "none",
               "min": "0",
               "max": "1"
-            }
-          ]
-        },
-        {
-          "pid": "2201057",
-          "pid_init": "ATSH7E4;",
-          "parameters": [
-            {
-              "name": "SOH",
-              "expression": "[B34:B35]/10",
-              "unit": "%",
-              "class": "none",
-              "min": "0",
-              "max": "105"
-            },
-            {
-              "name": "SOC_D",
-              "expression": "B41/2",
-              "unit": "%",
-              "class": "battery"
-            },
-            {
-              "name": "HV_C_D_MAX_NO",
-              "expression": "B36",
-              "unit": "none",
-              "class": "none"
-            },
-            {
-              "name": "HV_C_D_MIN",
-              "expression": "[B37:B38]/10",
-              "unit": "%",
-              "class": "none"
-            },
-            {
-              "name": "HV_C_D_MIN_NO",
-              "expression": "B39",
-              "unit": "none",
-              "class": "none"
-            },
-            {
-              "name": "AIRBAG",
-              "expression": "B30",
-              "unit": "",
-              "class": "none",
-              "min": "50",
-              "max": "100"
-            },
-            {
-              "name": "REGEN_MAX",
-              "expression": "((B23<<8)+B25)/100",
-              "unit": "kW",
-              "class": "power"
-            },
-            {
-              "name": "POWER_MAX",
-              "expression": "[B26:B27]/100",
-              "unit": "kW",
-              "class": "power"
-            },
-            {
-              "name": "HV_C_DIFF",
-              "expression": "B28/50",
-              "unit": "V",
-              "class": "battery",
-              "min": "0",
-              "max": "4"
-            },
-            {
-              "name": "HV_H_1",
-              "expression": "(S31)",
-              "unit": "°C",
-              "class": "temperature",
-              "min": "0",
-              "max": "80"
-            }
-          ]
-        },
-        {
-          "pid": "22BC03",
-          "pid_init": "ATSH770;",
-          "parameters": [
-            {
-              "name": "IGNITION",
-              "expression": "B11:5",
-              "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
-            },
-            {
-              "name": "DOOR_FL_OPEN",
-              "expression": "B10:5",
-              "unit": "",
-              "class": "door",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_FR_OPEN",
-              "expression": "B10:4",
-              "unit": "",
-              "class": "door",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_RL_OPEN",
-              "expression": "B10:0",
-              "unit": "",
-              "class": "door",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_RR_OPEN",
-              "expression": "B10:2",
-              "unit": "",
-              "class": "door",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "TRUNK_OPEN",
-              "expression": "B10:7",
-              "unit": "none",
-              "class": "door",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "SEATBELT_FL",
-              "expression": "B11:1",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "SEATBELT_FR",
-              "expression": "B11:2",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_LOCK_RL",
-              "expression": "B10:1",
-              "unit": "",
-              "class": "lock",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_LOCK_RR",
-              "expression": "B10:3",
-              "unit": "",
-              "class": "lock",
-              "type": "binary_sensor"
-            }
-          ]
-        },
-        {
-          "pid": "22BC04",
-          "pid_init": "ATSH770;",
-          "parameters": [
-            {
-              "name": "DOOR_LOCK_FL",
-              "expression": "B10:3",
-              "unit": "",
-              "class": "lock",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "DOOR_LOCK_FR",
-              "expression": "B10:2",
-              "unit": "",
-              "class": "lock",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "HIGH_BEAM",
-              "expression": "B13:4",
-              "unit": "none",
-              "class": "light",
-              "type": "binary_sensor"
-            }
-          ]
-        },
-        {
-          "pid": "22B002",
-          "pid_init": "ATSH7C6;ATFCSH7C6;",
-          "parameters": [
-            {
-              "name": "ODOMETER",
-              "expression": "[B12:B14]",
-              "class": "distance",
-              "unit": "km",
-              "min": "0"
-            }
-          ]
-        },
-        {
-          "pid": "220100",
-          "pid_init": "ATSH7B3;",
-          "parameters": [
-            {
-              "name": "TMP_A",
-              "expression": "(B12/2)-40",
-              "unit": "°C",
-              "class": "none"
-            },
-            {
-              "name": "T_CAB",
-              "expression": "(B11/2)-40",
-              "unit": "°C",
-              "class": "temperature"
-            }
-          ]
-        },
-        {
-          "pid": "22C101",
-          "pid_init": "ATSH7D1;",
-          "parameters": [
-            {
-              "name": "SPEED",
-              "expression": "B12",
-              "unit": "km/h",
-              "class": "speed"
-            }
-          ]
-        },
-        {
-          "pid": "21014",
-          "pid_init": "ATSH7E2;",
-          "parameters": [
-            {
-              "name": "READY",
-              "expression": "B26:3",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "GEAR",
-              "expression": "B10",
-              "unit": "none",
-              "class": "none"
-            },
-            {
-              "name": "PARK_BRAKE",
-              "expression": "B26:5",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "GEAR_PARK",
-              "expression": "B10:0",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "GEAR_REVERSE",
-              "expression": "B10:1",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "GEAR_NEUTRAL",
-              "expression": "B10:2",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "GEAR_DRIVE",
-              "expression": "B10:3",
-              "unit": "none",
-              "class": "none",
-              "type": "binary_sensor"
-            }
-          ]
-        },
-        {
-          "pid": "22B00E",
-          "pid_init": "ATSH7A0;",
-          "parameters": [
-            {
-              "name": "AC_PLUG",
-              "expression": "B10:4",
-              "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
-            }
-          ]
-        },
-        {
-          "pid": "22C00B4",
-          "pid_init": "ATSH7A0;",
-          "parameters": [
-            {
-              "name": "TYRE_P_FL",
-              "expression": "B10*0.2",
-              "class": "pressure",
-              "unit": "psi",
-              "min": "0"
-            },
-            {
-              "name": "TYRE_T_FL",
-              "expression": "B11-50",
-              "class": "temperature",
-              "unit": "°C"
-            },
-            {
-              "name": "TYRE_P_FR",
-              "expression": "B14*0.2",
-              "class": "pressure",
-              "unit": "psi",
-              "min": "0"
-            },
-            {
-              "name": "TYRE_T_FR",
-              "expression": "B15-50",
-              "class": "temperature",
-              "unit": "°C"
-            },
-            {
-              "name": "TYRE_P_RR",
-              "expression": "B19*0.2",
-              "class": "pressure",
-              "unit": "psi",
-              "min": "0"
-            },
-            {
-              "name": "TYRE_T_RR",
-              "expression": "B20-50",
-              "class": "temperature",
-              "unit": "°C"
-            },
-            {
-              "name": "TYRE_P_RL",
-              "expression": "B23*0.2",
-              "class": "pressure",
-              "unit": "psi",
-              "min": "0"
-            },
-            {
-              "name": "TYRE_T_RL",
-              "expression": "B25-50",
-              "class": "temperature",
-              "unit": "°C"
-            }
-          ]
-        },
-        {
-          "pid": "2101",
-          "pid_init": "ATSH7E5;",
-          "parameters": [
-            {
-              "name": "AC_C_V",
-              "expression": "B55",
-              "unit": "V",
-              "class": "battery"
-            },
-            {
-              "name": "OBC_TEMP",
-              "expression": "B52/2-40",
-              "unit": "°C",
-              "class": "temperature"
-            }
-          ]
-        },
-        {
-          "pid": "2103",
-          "pid_init": "ATSH7E5;",
-          "parameters": [
-            {
-              "name": "AC_C_C",
-              "expression": "[B9:B10]/100",
-              "unit": "A",
-              "class": "current"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "car_model": "Kia: Niro EV (2018-2022) - testing",
-      "init": "ATST96;",
-      "pids": [
-        {
-          "pid": "2201019",
-          "pid_init": "ATSH7E4;",
-          "parameters": [
-            {
-              "name": "SOC",
-              "expression": "B10/2",
-              "unit": "%",
-              "class": "battery",
-              "min": "0",
-              "max": "100"
-            },
-            {
-              "name": "HV_A",
-              "expression": "[S17:S18]/10",
-              "unit": "A",
-              "class": "current"
-            },
-            {
-              "name": "HV_V",
-              "expression": "[B19:B20]/10",
-              "unit": "V",
-              "class": "voltage",
-              "min": "200",
-              "max": "480"
-            },
-            {
-              "name": "HV_W",
-              "expression": "([B19:B20]/10)*([S17:S18]/10)",
-              "unit": "W",
-              "class": "power"
-            },
-            {
-              "name": "HV_T_MAX",
-              "expression": "S21",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_MIN",
-              "expression": "S22",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_1",
-              "expression": "S23",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_2",
-              "expression": "S25",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_3",
-              "expression": "S26",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_4",
-              "expression": "S27",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_T_I",
-              "expression": "S30",
-              "unit": "°C",
-              "class": "temperature"
-            },
-            {
-              "name": "HV_C_V_MAX",
-              "expression": "B31/50",
-              "unit": "V",
-              "class": "voltage"
-            },
-            {
-              "name": "HV_C_V_MAX_NO",
-              "expression": "B33",
-              "unit": "none",
-              "class": "none"
-            },
-            {
-              "name": "HV_C_V_MIN",
-              "expression": "B34/50",
-              "unit": "V",
-              "class": "voltage"
-            },
-            {
-              "name": "HV_C_V_MIN_NO",
-              "expression": "B35",
-              "unit": "none",
-              "class": "none"
-            },
-            {
-              "name": "LV_V",
-              "expression": "B38*0.1",
-              "unit": "V",
-              "class": "battery"
-            },
-            {
-              "name": "KWH_CHARGED",
-              "expression": "([B49:B50]*65536 + [B51:B52])/10",
-              "unit": "kWh",
-              "class": "energy",
-              "min": "0",
-              "max": "1000000"
-            },
-            {
-              "name": "KWH_DISCHARGED",
-              "expression": "([B53:B54]*65536 + (B55<<8) + B57)/10",
-              "unit": "kWh",
-              "class": "energy",
-              "min": "0",
-              "max": "1000000"
-            },
-            {
-              "name": "HV_RELAY",
-              "expression": "B15:7",
-              "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
             },
             {
               "name": "HV_AH_CHARGED",
@@ -11275,28 +11605,6 @@
               "class": "none",
               "min": "0",
               "max": "1000"
-            },
-            {
-              "name": "DM_F_RPM",
-              "expression": "[S66:S67]",
-              "unit": "rpm",
-              "class": "none",
-              "min": "-10100",
-              "max": "10100"
-            },
-            {
-              "name": "OP_TIME",
-              "expression": "[B58:B61]/3600",
-              "unit": "hours",
-              "class": "none",
-              "min": "0",
-              "max": "1000000"
-            },
-            {
-              "name": "HV_AV",
-              "expression": "[B13:B14]/100",
-              "unit": "kW",
-              "class": "power"
             }
           ]
         },
@@ -11454,23 +11762,16 @@
             },
             {
               "name": "DOOR_LOCK_RL",
-              "expression": "1-B10:1",
+              "expression": "B10:1",
               "unit": "",
               "class": "lock",
               "type": "binary_sensor"
             },
             {
               "name": "DOOR_LOCK_RR",
-              "expression": "1-B10:3",
+              "expression": "B10:3",
               "unit": "",
               "class": "lock",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "LOW_BEAM",
-              "expression": "B12:5",
-              "unit": "none",
-              "class": "light",
               "type": "binary_sensor"
             }
           ]
@@ -11511,13 +11812,6 @@
               "expression": "[B12:B14]",
               "class": "distance",
               "unit": "km",
-              "min": "0"
-            },
-            {
-              "name": "ODOMETER_MI",
-              "expression": "(B15<<16)+[B17:B18]",
-              "class": "distance",
-              "unit": "mi",
               "min": "0"
             }
           ]
@@ -12506,89 +12800,1460 @@
               "class": "temperature"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "car_model": "Kia: Niro EV (2018-2022) - testing",
+      "init": "ATST96;",
+      "pids": [
         {
-          "pid": "22E004",
-          "pid_init": "ATSH744;",
+          "pid": "2201019",
+          "pid_init": "ATSH7E4;",
           "parameters": [
             {
-              "name": "CHARGER_CONNECTED",
-              "expression": "B10:1",
-              "unit": "",
-              "class": "plug",
-              "type": "binary_sensor"
-            }
-          ]
-        },
-        {
-          "pid": "22E001",
-          "pid_init": "ATSH744;",
-          "parameters": [
-            {
-              "name": "CHARGING",
-              "expression": "B25:2",
-              "unit": "",
-              "class": "battery_charging",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "CHARGING_DC",
-              "expression": "B25:3",
-              "unit": "",
-              "class": "plug",
-              "type": "binary_sensor"
-            },
-            {
-              "name": "CHARGER_DC_PWR",
-              "expression": "(([B37:B38]*10)-50)/1000",
-              "unit": "kW",
-              "class": "power"
-            }
-          ]
-        },
-        {
-          "pid": "22E003",
-          "pid_init": "ATSH744;",
-          "parameters": [
-            {
-              "name": "CHARGING_R_A",
-              "expression": "[B35:B36]/10",
-              "unit": "A",
-              "class": "current",
-              "min": "0",
-              "max": "200"
-            }
-          ]
-        },
-        {
-          "pid": "22E011",
-          "pid_init": "ATSH7E5;",
-          "parameters": [
-            {
-              "name": "LV_SOC",
-              "expression": "B28",
+              "name": "SOC",
+              "expression": "B10/2",
               "unit": "%",
               "class": "battery",
               "min": "0",
               "max": "100"
             },
             {
-              "name": "LV_A",
-              "expression": "([B26:B27]/100)-327",
+              "name": "HV_A",
+              "expression": "[S17:S18]/10",
               "unit": "A",
               "class": "current"
+            },
+            {
+              "name": "HV_V",
+              "expression": "[B19:B20]/10",
+              "unit": "V",
+              "class": "voltage",
+              "min": "200",
+              "max": "480"
+            },
+            {
+              "name": "HV_W",
+              "expression": "([B19:B20]/10)*([S17:S18]/10)",
+              "unit": "W",
+              "class": "power"
+            },
+            {
+              "name": "HV_T_MAX",
+              "expression": "S21",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_MIN",
+              "expression": "S22",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_1",
+              "expression": "S23",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_2",
+              "expression": "S25",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_3",
+              "expression": "S26",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_4",
+              "expression": "S27",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_T_I",
+              "expression": "S30",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HV_C_V_MAX",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "voltage"
+            },
+            {
+              "name": "HV_C_V_MAX_NO",
+              "expression": "B33",
+              "unit": "none",
+              "class": "none"
+            },
+            {
+              "name": "HV_C_V_MIN",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "voltage"
+            },
+            {
+              "name": "HV_C_V_MIN_NO",
+              "expression": "B35",
+              "unit": "none",
+              "class": "none"
+            },
+            {
+              "name": "LV_V",
+              "expression": "B38*0.1",
+              "unit": "V",
+              "class": "battery"
+            },
+            {
+              "name": "KWH_CHARGED",
+              "expression": "([B49:B50]*65536 + [B51:B52])/10",
+              "unit": "kWh",
+              "class": "energy",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "KWH_DISCHARGED",
+              "expression": "([B53:B54]*65536 + (B55<<8) + B57)/10",
+              "unit": "kWh",
+              "class": "energy",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "HV_RELAY",
+              "expression": "B15:7",
+              "unit": "",
+              "type": "binary_sensor",
+              "class": "none",
+              "min": "0",
+              "max": "1"
+            },
+            {
+              "name": "HV_AH_CHARGED",
+              "expression": "((B39<<24)+[B41:B43])/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "HV_AH_DISCHARGED",
+              "expression": "[B44:B47]/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "CAPACITOR",
+              "expression": "(B63<<8)+B65",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "840"
+            },
+            {
+              "name": "RESISTANCE",
+              "expression": "[B70:B71]",
+              "unit": "kOhm",
+              "class": "none",
+              "min": "0",
+              "max": "1000"
+            },
+            {
+              "name": "DM_F_RPM",
+              "expression": "[S66:S67]",
+              "unit": "rpm",
+              "class": "none",
+              "min": "-10100",
+              "max": "10100"
+            },
+            {
+              "name": "OP_TIME",
+              "expression": "[B58:B61]/3600",
+              "unit": "hours",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "HV_FAN",
+              "expression": "B37",
+              "unit": "Hz",
+              "class": "frequency",
+              "min": "0",
+              "max": "255"
+            },
+            {
+              "name": "HV_FAN_STATUS",
+              "expression": "B36",
+              "unit": "",
+              "class": "none",
+              "min": "0",
+              "max": "255"
             }
           ]
         },
         {
-          "pid": "22E004",
+          "pid": "2201057",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "SOH",
+              "expression": "[B34:B35]/10",
+              "unit": "%",
+              "class": "none",
+              "min": "0",
+              "max": "105"
+            },
+            {
+              "name": "SOC_D",
+              "expression": "B41/2",
+              "unit": "%",
+              "class": "battery"
+            },
+            {
+              "name": "HV_C_D_MAX_NO",
+              "expression": "B36",
+              "unit": "none",
+              "class": "none"
+            },
+            {
+              "name": "HV_C_D_MIN",
+              "expression": "[B37:B38]/10",
+              "unit": "%",
+              "class": "none"
+            },
+            {
+              "name": "HV_C_D_MIN_NO",
+              "expression": "B39",
+              "unit": "none",
+              "class": "none"
+            },
+            {
+              "name": "AIRBAG",
+              "expression": "B30",
+              "unit": "",
+              "class": "none",
+              "min": "50",
+              "max": "100"
+            },
+            {
+              "name": "REGEN_MAX",
+              "expression": "((B23<<8)+B25)/100",
+              "unit": "kW",
+              "class": "power"
+            },
+            {
+              "name": "POWER_MAX",
+              "expression": "[B26:B27]/100",
+              "unit": "kW",
+              "class": "power"
+            },
+            {
+              "name": "HV_C_DIFF",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "4"
+            },
+            {
+              "name": "HV_H_1",
+              "expression": "(S31)",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "0",
+              "max": "80"
+            },
+            {
+              "name": "HV_C_V_097",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_098",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "22BC03",
+          "pid_init": "ATSH770;",
+          "parameters": [
+            {
+              "name": "IGNITION",
+              "expression": "B11:5",
+              "unit": "",
+              "type": "binary_sensor",
+              "class": "none",
+              "min": "0",
+              "max": "1"
+            },
+            {
+              "name": "DOOR_FL_OPEN",
+              "expression": "B10:5",
+              "unit": "",
+              "class": "door",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_FR_OPEN",
+              "expression": "B10:4",
+              "unit": "",
+              "class": "door",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_RL_OPEN",
+              "expression": "B10:0",
+              "unit": "",
+              "class": "door",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_RR_OPEN",
+              "expression": "B10:2",
+              "unit": "",
+              "class": "door",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "TRUNK_OPEN",
+              "expression": "B10:7",
+              "unit": "none",
+              "class": "door",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "SEATBELT_FL",
+              "expression": "B11:1",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "SEATBELT_FR",
+              "expression": "B11:2",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_LOCK_RL",
+              "expression": "B10:1",
+              "unit": "",
+              "class": "lock",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_LOCK_RR",
+              "expression": "B10:3",
+              "unit": "",
+              "class": "lock",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "LOW_BEAM",
+              "expression": "B12:5",
+              "unit": "none",
+              "class": "light",
+              "type": "binary_sensor"
+            }
+          ]
+        },
+        {
+          "pid": "22BC04",
+          "pid_init": "ATSH770;",
+          "parameters": [
+            {
+              "name": "DOOR_LOCK_FL",
+              "expression": "B10:3",
+              "unit": "",
+              "class": "lock",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "DOOR_LOCK_FR",
+              "expression": "B10:2",
+              "unit": "",
+              "class": "lock",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "HIGH_BEAM",
+              "expression": "B13:4",
+              "unit": "none",
+              "class": "light",
+              "type": "binary_sensor"
+            }
+          ]
+        },
+        {
+          "pid": "22B002",
+          "pid_init": "ATSH7C6;ATFCSH7C6;",
+          "parameters": [
+            {
+              "name": "ODOMETER",
+              "expression": "[B12:B14]",
+              "class": "distance",
+              "unit": "km",
+              "min": "0"
+            }
+          ]
+        },
+        {
+          "pid": "220100",
+          "pid_init": "ATSH7B3;",
+          "parameters": [
+            {
+              "name": "TMP_A",
+              "expression": "(B12/2)-40",
+              "unit": "°C",
+              "class": "none"
+            },
+            {
+              "name": "T_CAB",
+              "expression": "(B11/2)-40",
+              "unit": "°C",
+              "class": "temperature"
+            }
+          ]
+        },
+        {
+          "pid": "22C101",
+          "pid_init": "ATSH7D1;",
+          "parameters": [
+            {
+              "name": "SPEED",
+              "expression": "B12",
+              "unit": "km/h",
+              "class": "speed"
+            },
+            {
+              "name": "WHEEL_SPEED_FL",
+              "expression": "B18",
+              "unit": "km/h",
+              "class": "speed",
+              "min": "0",
+              "max": "255"
+            },
+            {
+              "name": "WHEEL_SPEED_FR",
+              "expression": "B19",
+              "unit": "km/h",
+              "class": "speed",
+              "min": "0",
+              "max": "255"
+            },
+            {
+              "name": "WHEEL_SPEED_RL",
+              "expression": "B20",
+              "unit": "km/h",
+              "class": "speed",
+              "min": "0",
+              "max": "255"
+            },
+            {
+              "name": "WHEEL_SPEED_RR",
+              "expression": "B21",
+              "unit": "km/h",
+              "class": "speed",
+              "min": "0",
+              "max": "255"
+            }
+          ]
+        },
+        {
+          "pid": "21014",
           "pid_init": "ATSH7E2;",
           "parameters": [
             {
-              "name": "THROTTLE",
-              "expression": "(B14+(B15<<8))/512",
-              "unit": "%",
+              "name": "READY",
+              "expression": "B26:3",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "GEAR",
+              "expression": "B10",
+              "unit": "none",
               "class": "none"
+            },
+            {
+              "name": "PARK_BRAKE",
+              "expression": "B26:5",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "GEAR_PARK",
+              "expression": "B10:0",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "GEAR_REVERSE",
+              "expression": "B10:1",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "GEAR_NEUTRAL",
+              "expression": "B10:2",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "GEAR_DRIVE",
+              "expression": "B10:3",
+              "unit": "none",
+              "class": "none",
+              "type": "binary_sensor"
+            }
+          ]
+        },
+        {
+          "pid": "22B00E",
+          "pid_init": "ATSH7A0;",
+          "parameters": [
+            {
+              "name": "AC_PLUG",
+              "expression": "B10:4",
+              "unit": "",
+              "type": "binary_sensor",
+              "class": "none",
+              "min": "0",
+              "max": "1"
+            },
+            {
+              "name": "CHARGE_PORT_OPEN",
+              "expression": "B10:4",
+              "unit": "",
+              "class": "door",
+              "type": "binary_sensor"
+            }
+          ]
+        },
+        {
+          "pid": "22C00B4",
+          "pid_init": "ATSH7A0;",
+          "parameters": [
+            {
+              "name": "TYRE_P_FL",
+              "expression": "B10*0.2",
+              "class": "pressure",
+              "unit": "psi",
+              "min": "0"
+            },
+            {
+              "name": "TYRE_T_FL",
+              "expression": "B11-50",
+              "class": "temperature",
+              "unit": "°C"
+            },
+            {
+              "name": "TYRE_P_FR",
+              "expression": "B14*0.2",
+              "class": "pressure",
+              "unit": "psi",
+              "min": "0"
+            },
+            {
+              "name": "TYRE_T_FR",
+              "expression": "B15-50",
+              "class": "temperature",
+              "unit": "°C"
+            },
+            {
+              "name": "TYRE_P_RR",
+              "expression": "B19*0.2",
+              "class": "pressure",
+              "unit": "psi",
+              "min": "0"
+            },
+            {
+              "name": "TYRE_T_RR",
+              "expression": "B20-50",
+              "class": "temperature",
+              "unit": "°C"
+            },
+            {
+              "name": "TYRE_P_RL",
+              "expression": "B23*0.2",
+              "class": "pressure",
+              "unit": "psi",
+              "min": "0"
+            },
+            {
+              "name": "TYRE_T_RL",
+              "expression": "B25-50",
+              "class": "temperature",
+              "unit": "°C"
+            }
+          ]
+        },
+        {
+          "pid": "2101",
+          "pid_init": "ATSH7E5;",
+          "parameters": [
+            {
+              "name": "AC_C_V",
+              "expression": "B55",
+              "unit": "V",
+              "class": "battery"
+            },
+            {
+              "name": "OBC_TEMP",
+              "expression": "B52/2-40",
+              "unit": "°C",
+              "class": "temperature"
+            }
+          ]
+        },
+        {
+          "pid": "2103",
+          "pid_init": "ATSH7E5;",
+          "parameters": [
+            {
+              "name": "AC_C_C",
+              "expression": "[B28:B29]/100",
+              "unit": "A",
+              "class": "current"
+            },
+            {
+              "name": "EVSE_MAX_A",
+              "expression": "[B9:B10]/100",
+              "unit": "A",
+              "class": "current",
+              "min": "0",
+              "max": "80"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_001",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_002",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_003",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_004",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_005",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_006",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_007",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_008",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_009",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_010",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_011",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_012",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_013",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_014",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_015",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_016",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_017",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_018",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_019",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_020",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_021",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_022",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_023",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_024",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_025",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_026",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_027",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_028",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_029",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_030",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_031",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_032",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220103",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_033",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_034",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_035",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_036",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_037",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_038",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_039",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_040",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_041",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_042",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_043",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_044",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_045",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_046",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_047",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_048",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_049",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_050",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_051",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_052",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_053",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_054",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_055",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_056",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_057",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_058",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_059",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_060",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_061",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_062",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_063",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_064",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220104",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_065",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_066",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_067",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_068",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_069",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_070",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_071",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_072",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_073",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_074",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_075",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_076",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_077",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_078",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_079",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_080",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_081",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_082",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_083",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_084",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_085",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_086",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_087",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_088",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_089",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_090",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_091",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_092",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_093",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_094",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_095",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_096",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7B3;",
+          "parameters": [
+            {
+              "name": "COOLANT_TMP",
+              "expression": "(B10/2)-40",
+              "unit": "°C",
+              "class": "temperature"
+            },
+            {
+              "name": "HVAC_INV_T",
+              "expression": "(B19/2)-40",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "-40",
+              "max": "87.5"
             }
           ]
         },
@@ -12603,6 +14268,186 @@
               "class": "none",
               "min": "-720",
               "max": "720"
+            }
+          ]
+        },
+        {
+          "pid": "220106",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_FAN_DUTY",
+              "expression": "B14",
+              "unit": "%",
+              "class": "none",
+              "min": "0",
+              "max": "100"
+            },
+            {
+              "name": "HV_T_WCS",
+              "expression": "S10",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "-128",
+              "max": "127"
+            },
+            {
+              "name": "HV_T_PRA",
+              "expression": "(S28)*2",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "-256",
+              "max": "254"
+            },
+            {
+              "name": "BMS_STATE",
+              "expression": "B5",
+              "unit": "",
+              "class": "none",
+              "min": "0",
+              "max": "15"
+            },
+            {
+              "name": "AC_COMP_RPM",
+              "expression": "B19*20",
+              "unit": "rpm",
+              "class": "none",
+              "min": "0",
+              "max": "5100"
+            }
+          ]
+        },
+        {
+          "pid": "220111",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "CHG_AC_COUNT",
+              "expression": "[B10:B13]",
+              "unit": "",
+              "class": "none",
+              "min": "0"
+            },
+            {
+              "name": "CHG_DC_COUNT",
+              "expression": "([B14:B15]<<16)+[B17:B18]",
+              "unit": "",
+              "class": "none",
+              "min": "0"
+            },
+            {
+              "name": "KWH_AC_CHARGED",
+              "expression": "[B19:B22]",
+              "unit": "kWh",
+              "class": "energy",
+              "min": "0"
+            },
+            {
+              "name": "KWH_DC_CHARGED",
+              "expression": "(B23<<24)+[B25:B27]",
+              "unit": "kWh",
+              "class": "energy",
+              "min": "0"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7E3;",
+          "parameters": [
+            {
+              "name": "MOTOR_T",
+              "expression": "S18",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "-128",
+              "max": "127"
+            },
+            {
+              "name": "INVERTER_T",
+              "expression": "S19",
+              "unit": "°C",
+              "class": "temperature",
+              "min": "-128",
+              "max": "127"
+            }
+          ]
+        },
+        {
+          "pid": "22F010",
+          "pid_init": "ATSH730;",
+          "parameters": [
+            {
+              "name": "ACCEL_LAT",
+              "expression": "(((B21+(B22<<8))*8.354)/65535)-4.177",
+              "unit": "m/s²",
+              "class": "none",
+              "min": "-4.1769",
+              "max": "4.1769"
+            },
+            {
+              "name": "ACCEL_LONG",
+              "expression": "(((B23+(B25<<8))*8.354)/65535)-4.177",
+              "unit": "m/s²",
+              "class": "none",
+              "min": "-4.1769",
+              "max": "4.1769"
+            },
+            {
+              "name": "YAW_RATE",
+              "expression": "B26/200",
+              "unit": "deg/s",
+              "class": "none",
+              "min": "0",
+              "max": "1.275"
+            }
+          ]
+        },
+        {
+          "pid": "22BC08",
+          "pid_init": "ATSH770;",
+          "parameters": [
+            {
+              "name": "TURN_L",
+              "expression": "B10:1",
+              "unit": "",
+              "class": "light",
+              "type": "binary_sensor"
+            },
+            {
+              "name": "TURN_R",
+              "expression": "B10:2",
+              "unit": "",
+              "class": "light",
+              "type": "binary_sensor"
+            }
+          ]
+        },
+        {
+          "pid": "22BC05",
+          "pid_init": "ATSH770;",
+          "parameters": [
+            {
+              "name": "HAZARD",
+              "expression": "B10",
+              "unit": "",
+              "class": "none",
+              "min": "0",
+              "max": "255"
+            }
+          ]
+        },
+        {
+          "pid": "22BC06",
+          "pid_init": "ATSH770;",
+          "parameters": [
+            {
+              "name": "BRAKE_LIGHT",
+              "expression": "B10",
+              "unit": "",
+              "class": "none",
+              "min": "0",
+              "max": "255"
             }
           ]
         }
@@ -12784,6 +14629,38 @@
               "class": "none",
               "min": "0",
               "max": "1"
+            },
+            {
+              "name": "HV_AH_CHARGED",
+              "expression": "((B39<<24)+[B41:B43])/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "HV_AH_DISCHARGED",
+              "expression": "[B44:B47]/10",
+              "unit": "Ah",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
+            },
+            {
+              "name": "CAPACITOR",
+              "expression": "(B63<<8)+B65",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "840"
+            },
+            {
+              "name": "RESISTANCE",
+              "expression": "[B70:B71]",
+              "unit": "kOhm",
+              "class": "none",
+              "min": "0",
+              "max": "1000"
             }
           ]
         },
@@ -12858,6 +14735,22 @@
               "class": "temperature",
               "min": "0",
               "max": "80"
+            },
+            {
+              "name": "HV_C_V_097",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_098",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
             }
           ]
         },
@@ -13163,6 +15056,804 @@
               "expression": "[B9:B10]/100",
               "unit": "A",
               "class": "current"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_001",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_002",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_003",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_004",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_005",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_006",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_007",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_008",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_009",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_010",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_011",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_012",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_013",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_014",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_015",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_016",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_017",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_018",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_019",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_020",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_021",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_022",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_023",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_024",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_025",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_026",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_027",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_028",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_029",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_030",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_031",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_032",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220103",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_033",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_034",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_035",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_036",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_037",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_038",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_039",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_040",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_041",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_042",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_043",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_044",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_045",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_046",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_047",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_048",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_049",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_050",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_051",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_052",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_053",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_054",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_055",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_056",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_057",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_058",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_059",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_060",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_061",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_062",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_063",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_064",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220104",
+          "pid_init": "ATSH7E4;",
+          "parameters": [
+            {
+              "name": "HV_C_V_065",
+              "expression": "B10/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_066",
+              "expression": "B11/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_067",
+              "expression": "B12/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_068",
+              "expression": "B13/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_069",
+              "expression": "B14/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_070",
+              "expression": "B15/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_071",
+              "expression": "B17/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_072",
+              "expression": "B18/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_073",
+              "expression": "B19/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_074",
+              "expression": "B20/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_075",
+              "expression": "B21/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_076",
+              "expression": "B22/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_077",
+              "expression": "B23/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_078",
+              "expression": "B25/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_079",
+              "expression": "B26/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_080",
+              "expression": "B27/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_081",
+              "expression": "B28/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_082",
+              "expression": "B29/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_083",
+              "expression": "B30/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_084",
+              "expression": "B31/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_085",
+              "expression": "B33/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_086",
+              "expression": "B34/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_087",
+              "expression": "B35/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_088",
+              "expression": "B36/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_089",
+              "expression": "B37/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_090",
+              "expression": "B38/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_091",
+              "expression": "B39/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_092",
+              "expression": "B41/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_093",
+              "expression": "B42/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_094",
+              "expression": "B43/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_095",
+              "expression": "B44/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            },
+            {
+              "name": "HV_C_V_096",
+              "expression": "B45/50",
+              "unit": "V",
+              "class": "battery",
+              "min": "0",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "pid": "220102",
+          "pid_init": "ATSH7B3;",
+          "parameters": [
+            {
+              "name": "COOLANT_TMP",
+              "expression": "(B10/2)-40",
+              "unit": "°C",
+              "class": "temperature"
             }
           ]
         }
