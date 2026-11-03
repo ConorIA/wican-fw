@@ -1,5 +1,6 @@
 {
   "car_model": "Kia: Niro EV (2018-2022) - testing",
+  "add_to_docs": false,
   "init": "ATST96;",
   "pids": [
     {
@@ -30,8 +31,7 @@
         "CAPACITOR": "(B63<<8)+B65",
         "RESISTANCE": "[B70:B71]",
         "DM_F_RPM": "[S66:S67]",
-        "OP_TIME": "[B58:B61]/3600",
-        "HV_AV": "[B13:B14]/100"
+        "OP_TIME": "[B58:B61]/3600"
       }
     },
     {
@@ -64,8 +64,8 @@
         "TRUNK_OPEN": "B10:7",
         "SEATBELT_FL": "B11:1",
         "SEATBELT_FR": "B11:2",
-        "DOOR_LOCK_RL": "1-B10:1",
-        "DOOR_LOCK_RR": "1-B10:3",
+        "DOOR_LOCK_RL": "B10:1",
+        "DOOR_LOCK_RR": "B10:3",
         "LOW_BEAM": "B12:5"
       }
     },
@@ -82,8 +82,7 @@
       "pid": "22B002",
       "pid_init": "ATSH7C6;ATFCSH7C6;",
       "parameters": {
-        "ODOMETER": "[B12:B14]",
-        "ODOMETER_MI": "(B15<<16)+[B17:B18]"
+        "ODOMETER": "[B12:B14]"
       }
     },
     {
@@ -147,7 +146,7 @@
       "pid": "2103",
       "pid_init": "ATSH7E5;",
       "parameters": {
-        "AC_C_C": "[B9:B10]/100"
+        "AC_C_C": "[B28:B29]/100"
       }
     },
     {
@@ -269,44 +268,6 @@
       "pid_init": "ATSH7B3;",
       "parameters": {
         "COOLANT_TMP": "(B10/2)-40"
-      }
-    },
-    {
-      "pid": "22E004",
-      "pid_init": "ATSH744;",
-      "parameters": {
-        "CHARGER_CONNECTED": "B10:1"
-      }
-    },
-    {
-      "pid": "22E001",
-      "pid_init": "ATSH744;",
-      "parameters": {
-        "CHARGING": "B25:2",
-        "CHARGING_DC": "B25:3",
-        "CHARGER_DC_PWR": "(([B37:B38]*10)-50)/1000"
-      }
-    },
-    {
-      "pid": "22E003",
-      "pid_init": "ATSH744;",
-      "parameters": {
-        "CHARGING_R_A": "[B35:B36]/10"
-      }
-    },
-    {
-      "pid": "22E011",
-      "pid_init": "ATSH7E5;",
-      "parameters": {
-        "LV_SOC": "B28",
-        "LV_A": "([B26:B27]/100)-327"
-      }
-    },
-    {
-      "pid": "22E004",
-      "pid_init": "ATSH7E2;",
-      "parameters": {
-        "THROTTLE": "(B14+(B15<<8))/512"
       }
     },
     {
