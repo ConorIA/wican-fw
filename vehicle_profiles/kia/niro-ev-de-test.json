@@ -31,7 +31,9 @@
         "CAPACITOR": "(B63<<8)+B65",
         "RESISTANCE": "[B70:B71]",
         "DM_F_RPM": "[S66:S67]",
-        "OP_TIME": "[B58:B61]/3600"
+        "OP_TIME": "[B58:B61]/3600",
+        "HV_FAN": "B37",
+        "HV_FAN_STATUS": "B36"
       }
     },
     {
@@ -97,7 +99,11 @@
       "pid": "22C101",
       "pid_init": "ATSH7D1;",
       "parameters": {
-        "SPEED": "B12"
+        "SPEED": "B12",
+        "WHEEL_SPEED_FL": "B18",
+        "WHEEL_SPEED_FR": "B19",
+        "WHEEL_SPEED_RL": "B20",
+        "WHEEL_SPEED_RR": "B21"
       }
     },
     {
@@ -117,7 +123,8 @@
       "pid": "22B00E",
       "pid_init": "ATSH7A0;",
       "parameters": {
-        "AC_PLUG": "B10:4"
+        "AC_PLUG": "B10:4",
+        "CHARGE_PORT_OPEN": "B10:4"
       }
     },
     {
@@ -146,7 +153,8 @@
       "pid": "2103",
       "pid_init": "ATSH7E5;",
       "parameters": {
-        "AC_C_C": "[B28:B29]/100"
+        "AC_C_C": "[B28:B29]/100",
+        "EVSE_MAX_A": "[B9:B10]/100"
       }
     },
     {
@@ -267,7 +275,8 @@
       "pid": "220102",
       "pid_init": "ATSH7B3;",
       "parameters": {
-        "COOLANT_TMP": "(B10/2)-40"
+        "COOLANT_TMP": "(B10/2)-40",
+        "HVAC_INV_T": "(B19/2)-40"
       }
     },
     {
@@ -275,6 +284,66 @@
       "pid_init": "ATSH7D4;",
       "parameters": {
         "STEER_ANGLE": "[S14:S15]/10"
+      }
+    },
+    {
+      "pid": "220106",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "HV_FAN_DUTY": "B14",
+        "HV_T_WCS": "S10",
+        "HV_T_PRA": "(S28)*2",
+        "BMS_STATE": "B5",
+        "AC_COMP_RPM": "B19*20"
+      }
+    },
+    {
+      "pid": "220111",
+      "pid_init": "ATSH7E4;",
+      "parameters": {
+        "CHG_AC_COUNT": "[B10:B13]",
+        "CHG_DC_COUNT": "([B14:B15]<<16)+[B17:B18]",
+        "KWH_AC_CHARGED": "[B19:B22]",
+        "KWH_DC_CHARGED": "(B23<<24)+[B25:B27]"
+      }
+    },
+    {
+      "pid": "220102",
+      "pid_init": "ATSH7E3;",
+      "parameters": {
+        "MOTOR_T": "S18",
+        "INVERTER_T": "S19"
+      }
+    },
+    {
+      "pid": "22F010",
+      "pid_init": "ATSH730;",
+      "parameters": {
+        "ACCEL_LAT": "(((B21+(B22<<8))*8.354)/65535)-4.177",
+        "ACCEL_LONG": "(((B23+(B25<<8))*8.354)/65535)-4.177",
+        "YAW_RATE": "B26/200"
+      }
+    },
+    {
+      "pid": "22BC08",
+      "pid_init": "ATSH770;",
+      "parameters": {
+        "TURN_L": "B10:1",
+        "TURN_R": "B10:2"
+      }
+    },
+    {
+      "pid": "22BC05",
+      "pid_init": "ATSH770;",
+      "parameters": {
+        "HAZARD": "B10"
+      }
+    },
+    {
+      "pid": "22BC06",
+      "pid_init": "ATSH770;",
+      "parameters": {
+        "BRAKE_LIGHT": "B10"
       }
     }
   ]

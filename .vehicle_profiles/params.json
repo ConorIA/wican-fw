@@ -1,9 +1,36 @@
 {
+  "ACCEL_LAT": {
+    "description": "Lateral acceleration",
+    "settings": {
+      "unit": "m/s²",
+      "class": "none",
+      "min": "-4.1769",
+      "max": "4.1769"
+    }
+  },
+  "ACCEL_LONG": {
+    "description": "Longitudinal acceleration",
+    "settings": {
+      "unit": "m/s²",
+      "class": "none",
+      "min": "-4.1769",
+      "max": "4.1769"
+    }
+  },
   "AC_COMP": {
     "description": "AC Compressor (ON/OFF)",
     "settings": {
       "unit": "",
       "class": "none"
+    }
+  },
+  "AC_COMP_RPM": {
+    "description": "A/C compressor speed",
+    "settings": {
+      "unit": "rpm",
+      "class": "none",
+      "min": "0",
+      "max": "5100"
     }
   },
   "AC_C_C": {
@@ -69,6 +96,24 @@
       "max": "80"
     }
   },
+  "BMS_STATE": {
+    "description": "Battery management state",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0",
+      "max": "15"
+    }
+  },
+  "BRAKE_LIGHT": {
+    "description": "Brake light",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0",
+      "max": "255"
+    }
+  },
   "CABIN_TEMPERATURE": {
     "description": "Cabin temperature",
     "settings": {
@@ -101,6 +146,14 @@
       "class": "power"
     }
   },
+  "CHARGE_PORT_OPEN": {
+    "description": "Charge port door open",
+    "settings": {
+      "unit": "",
+      "class": "door",
+      "type": "binary_sensor"
+    }
+  },
   "CHARGING": {
     "description": "Is EV Charging",
     "settings": {
@@ -124,6 +177,22 @@
       "class": "current",
       "min": "0",
       "max": "200"
+    }
+  },
+  "CHG_AC_COUNT": {
+    "description": "AC (normal) charging sessions, count",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0"
+    }
+  },
+  "CHG_DC_COUNT": {
+    "description": "DC (quick) charging sessions, count",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0"
     }
   },
   "CO2": {
@@ -258,6 +327,15 @@
       "class": "frequency"
     }
   },
+  "EVSE_MAX_A": {
+    "description": "Charge station maximum current",
+    "settings": {
+      "unit": "A",
+      "class": "current",
+      "min": "0",
+      "max": "80"
+    }
+  },
   "FOG_FRONT": {
     "description": "Front fog lights active",
     "settings": {
@@ -355,6 +433,15 @@
       "type": "binary_sensor"
     }
   },
+  "HAZARD": {
+    "description": "Hazard lights switch",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0",
+      "max": "255"
+    }
+  },
   "HIGH_BEAM": {
     "description": "High beam headlights active",
     "settings": {
@@ -368,6 +455,15 @@
     "settings": {
       "unit": "%",
       "class": "humidity"
+    }
+  },
+  "HVAC_INV_T": {
+    "description": "A/C inverter temperature",
+    "settings": {
+      "unit": "°C",
+      "class": "temperature",
+      "min": "-40",
+      "max": "87.5"
     }
   },
   "HV_A": {
@@ -2216,6 +2312,33 @@
       "class": "none"
     }
   },
+  "HV_FAN": {
+    "description": "HV battery fan feedback",
+    "settings": {
+      "unit": "Hz",
+      "class": "frequency",
+      "min": "0",
+      "max": "255"
+    }
+  },
+  "HV_FAN_DUTY": {
+    "description": "HV battery fan duty",
+    "settings": {
+      "unit": "%",
+      "class": "none",
+      "min": "0",
+      "max": "100"
+    }
+  },
+  "HV_FAN_STATUS": {
+    "description": "HV battery fan status",
+    "settings": {
+      "unit": "",
+      "class": "none",
+      "min": "0",
+      "max": "255"
+    }
+  },
   "HV_H_1": {
     "description": "Battery Heater 1 Temperature",
     "settings": {
@@ -2577,6 +2700,24 @@
       "class": "temperature"
     }
   },
+  "HV_T_PRA": {
+    "description": "HV battery temperature at the power relay assembly",
+    "settings": {
+      "unit": "°C",
+      "class": "temperature",
+      "min": "-256",
+      "max": "254"
+    }
+  },
+  "HV_T_WCS": {
+    "description": "HV battery temperature at the water-cooling system inlet",
+    "settings": {
+      "unit": "°C",
+      "class": "temperature",
+      "min": "-128",
+      "max": "127"
+    }
+  },
   "HV_V": {
     "description": "High Voltage Battery Voltage",
     "settings": {
@@ -2617,6 +2758,23 @@
       "class": "temperature"
     }
   },
+  "INVERTER_T": {
+    "description": "Drive inverter temperature",
+    "settings": {
+      "unit": "°C",
+      "class": "temperature",
+      "min": "-128",
+      "max": "127"
+    }
+  },
+  "KWH_AC_CHARGED": {
+    "description": "Total energy charged on AC (normal charging)",
+    "settings": {
+      "unit": "kWh",
+      "class": "energy",
+      "min": "0"
+    }
+  },
   "KWH_CHARGED": {
     "description": "Total kWh Charged (Cumulative Energy Charged)",
     "settings": {
@@ -2624,6 +2782,14 @@
       "class": "energy",
       "min": "0",
       "max": "1000000"
+    }
+  },
+  "KWH_DC_CHARGED": {
+    "description": "Total energy charged on DC (quick charging)",
+    "settings": {
+      "unit": "kWh",
+      "class": "energy",
+      "min": "0"
     }
   },
   "KWH_DISCHARGED": {
@@ -2671,6 +2837,15 @@
     "settings": {
       "unit": "g/s",
       "class": "none"
+    }
+  },
+  "MOTOR_T": {
+    "description": "Drive motor temperature",
+    "settings": {
+      "unit": "°C",
+      "class": "temperature",
+      "min": "-128",
+      "max": "127"
     }
   },
   "OBC_TEMP": {
@@ -2983,6 +3158,22 @@
       "type": "binary_sensor"
     }
   },
+  "TURN_L": {
+    "description": "Left turn signal on",
+    "settings": {
+      "unit": "",
+      "class": "light",
+      "type": "binary_sensor"
+    }
+  },
+  "TURN_R": {
+    "description": "Right turn signal on",
+    "settings": {
+      "unit": "",
+      "class": "light",
+      "type": "binary_sensor"
+    }
+  },
   "TYRE_P_FL": {
     "description": "Tyre Pressure Front Left",
     "settings": {
@@ -3055,6 +3246,51 @@
     "settings": {
       "unit": "%",
       "class": "none"
+    }
+  },
+  "WHEEL_SPEED_FL": {
+    "description": "Wheel speed front left",
+    "settings": {
+      "unit": "km/h",
+      "class": "speed",
+      "min": "0",
+      "max": "255"
+    }
+  },
+  "WHEEL_SPEED_FR": {
+    "description": "Wheel speed front right",
+    "settings": {
+      "unit": "km/h",
+      "class": "speed",
+      "min": "0",
+      "max": "255"
+    }
+  },
+  "WHEEL_SPEED_RL": {
+    "description": "Wheel speed rear left",
+    "settings": {
+      "unit": "km/h",
+      "class": "speed",
+      "min": "0",
+      "max": "255"
+    }
+  },
+  "WHEEL_SPEED_RR": {
+    "description": "Wheel speed rear right",
+    "settings": {
+      "unit": "km/h",
+      "class": "speed",
+      "min": "0",
+      "max": "255"
+    }
+  },
+  "YAW_RATE": {
+    "description": "Yaw rate",
+    "settings": {
+      "unit": "deg/s",
+      "class": "none",
+      "min": "0",
+      "max": "1.275"
     }
   }
 }
