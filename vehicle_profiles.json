@@ -7301,6 +7301,22 @@
               "class": "none",
               "min": "0",
               "max": "1000"
+            },
+            {
+              "name": "DM_F_RPM",
+              "expression": "[S66:S67]",
+              "unit": "rpm",
+              "class": "none",
+              "min": "-10100",
+              "max": "10100"
+            },
+            {
+              "name": "OP_TIME",
+              "expression": "[B58:B61]/3600",
+              "unit": "hours",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
             }
           ]
         },
@@ -7469,6 +7485,13 @@
               "unit": "",
               "class": "lock",
               "type": "binary_sensor"
+            },
+            {
+              "name": "LOW_BEAM",
+              "expression": "B12:5",
+              "unit": "none",
+              "class": "light",
+              "type": "binary_sensor"
             }
           ]
         },
@@ -7601,13 +7624,11 @@
           "pid_init": "ATSH7A0;",
           "parameters": [
             {
-              "name": "AC_PLUG",
+              "name": "CHARGE_PORT_OPEN",
               "expression": "B10:4",
               "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
+              "class": "door",
+              "type": "binary_sensor"
             }
           ]
         },
@@ -11605,6 +11626,22 @@
               "class": "none",
               "min": "0",
               "max": "1000"
+            },
+            {
+              "name": "DM_F_RPM",
+              "expression": "[S66:S67]",
+              "unit": "rpm",
+              "class": "none",
+              "min": "-10100",
+              "max": "10100"
+            },
+            {
+              "name": "OP_TIME",
+              "expression": "[B58:B61]/3600",
+              "unit": "hours",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
             }
           ]
         },
@@ -11773,6 +11810,13 @@
               "unit": "",
               "class": "lock",
               "type": "binary_sensor"
+            },
+            {
+              "name": "LOW_BEAM",
+              "expression": "B12:5",
+              "unit": "none",
+              "class": "light",
+              "type": "binary_sensor"
             }
           ]
         },
@@ -11905,13 +11949,11 @@
           "pid_init": "ATSH7A0;",
           "parameters": [
             {
-              "name": "AC_PLUG",
+              "name": "CHARGE_PORT_OPEN",
               "expression": "B10:4",
               "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
+              "class": "door",
+              "type": "binary_sensor"
             }
           ]
         },
@@ -13338,15 +13380,6 @@
           "pid_init": "ATSH7A0;",
           "parameters": [
             {
-              "name": "AC_PLUG",
-              "expression": "B10:4",
-              "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
-            },
-            {
               "name": "CHARGE_PORT_OPEN",
               "expression": "B10:4",
               "unit": "",
@@ -14661,6 +14694,22 @@
               "class": "none",
               "min": "0",
               "max": "1000"
+            },
+            {
+              "name": "DM_F_RPM",
+              "expression": "[S66:S67]",
+              "unit": "rpm",
+              "class": "none",
+              "min": "-10100",
+              "max": "10100"
+            },
+            {
+              "name": "OP_TIME",
+              "expression": "[B58:B61]/3600",
+              "unit": "hours",
+              "class": "none",
+              "min": "0",
+              "max": "1000000"
             }
           ]
         },
@@ -14829,6 +14878,13 @@
               "unit": "",
               "class": "lock",
               "type": "binary_sensor"
+            },
+            {
+              "name": "LOW_BEAM",
+              "expression": "B12:5",
+              "unit": "none",
+              "class": "light",
+              "type": "binary_sensor"
             }
           ]
         },
@@ -14961,13 +15017,11 @@
           "pid_init": "ATSH7A0;",
           "parameters": [
             {
-              "name": "AC_PLUG",
+              "name": "CHARGE_PORT_OPEN",
               "expression": "B10:4",
               "unit": "",
-              "type": "binary_sensor",
-              "class": "none",
-              "min": "0",
-              "max": "1"
+              "class": "door",
+              "type": "binary_sensor"
             }
           ]
         },
