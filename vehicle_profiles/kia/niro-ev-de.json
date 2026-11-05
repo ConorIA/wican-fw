@@ -28,7 +28,9 @@
         "HV_AH_CHARGED": "((B39<<24)+[B41:B43])/10",
         "HV_AH_DISCHARGED": "[B44:B47]/10",
         "CAPACITOR": "(B63<<8)+B65",
-        "RESISTANCE": "[B70:B71]"
+        "RESISTANCE": "[B70:B71]",
+        "DM_F_RPM": "[S66:S67]",
+        "OP_TIME": "[B58:B61]/3600"
       }
     },
     {
@@ -62,7 +64,8 @@
         "SEATBELT_FL": "B11:1",
         "SEATBELT_FR": "B11:2",
         "DOOR_LOCK_RL": "B10:1",
-        "DOOR_LOCK_RR": "B10:3"
+        "DOOR_LOCK_RR": "B10:3",
+        "LOW_BEAM": "B12:5"
       }
     },
     {
@@ -113,7 +116,7 @@
       "pid": "22B00E",
       "pid_init": "ATSH7A0;",
       "parameters": {
-        "AC_PLUG": "B10:4"
+        "CHARGE_PORT_OPEN": "B10:4"
       }
     },
     {

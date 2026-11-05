@@ -123,7 +123,6 @@
       "pid": "22B00E",
       "pid_init": "ATSH7A0;",
       "parameters": {
-        "AC_PLUG": "B10:4",
         "CHARGE_PORT_OPEN": "B10:4"
       }
     },
